@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigating a Period</title>
+  <link rel="stylesheet" href="paths.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="avatar.png" alt="Lily Avatar">
+      <div class="alerions">💰 100 Alerions</div>
+      <ul>
+        <li><a href="#"><strong>HOME</strong></a></li>
+        <li><a href="#"><strong>RESOURCES</strong></a></li>
+        <li><a href="#"><strong>STORE</strong></a></li>
+        <li><a href="#"><strong>AWARD</strong></a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/navigating.png">
+      
+      <!-- Circle Icons for Navigation -->
+      <div class="navigation-path">
+        <div class="circle" onclick="navigateTo('meetLily')">
+          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/person.png" alt="Meet Lily">
+          <p>Meet Lily</p>
+        </div>
+        <div class="circle" onclick="navigateTo('whatsAPeriod')">
+          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/redblob.png" alt="What's a Period?">
+          <p>What's a Period?</p>
+        </div>
+        <div class="circle" onclick="navigateTo('helpLily')">
+          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/question.png" alt="Help Lily">
+          <p>Help Lily</p>
+        </div>
+        <div class="circle" onclick="navigateTo('lilysproactiveness')">
+          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/arrow.png" alt="Lily's Proactiveness">
+          <p>Lily's Proactiveness</p>
+        </div>  
+        <div class="circle" onclick="navigateTo('lilysproactiveness')">
+          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/trophy.png" alt="Lily's Proactiveness">
+          <p>Lily's Lesson</p>
+        </div>  
+      </div>
+      
+      <div class="navigation-btns">
+        <h2></h2>
+        <button class="btn"><strong>Next</strong></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function navigateTo(section) {
+      alert(`Navigating to ${section}`);
+      // Implement navigation logic here, such as loading a new page or displaying content
+    }
+  </script>
+</body>
+</html>

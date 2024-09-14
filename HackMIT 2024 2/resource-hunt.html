@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resource Hunt</title>
+</head>
+<body>
+    <div class="game-container">
+        <h2>Resource Hunt</h2>
+        <p>Help your character collect period resources!</p>
+
+        <div class="game-sidebar">
+            <div class="scoreboard">
+                <p>Resources Collected: <span id="score">0</span></p>
+            </div>
+            <div class="instructions">
+                <p>Use the arrow buttons to move your character and collect resources!</p>
+            </div>
+        </div>
+
+        <div class="game-grid">
+            <!-- Example grid with 25 cells -->
+            <div class="grid-cell" id="cell-0"></div>
+            <div class="grid-cell character" id="cell-1"></div>
+            <div class="grid-cell resource" id="cell-2"></div>
+            <div class="grid-cell obstacle" id="cell-3"></div>
+            <div class="grid-cell" id="cell-4"></div>
+            <!-- Add more cells to form a complex grid -->
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="move('up')">⬆️</button>
+            <button class="btn" onclick="move('left')">⬅️</button>
+            <button class="btn" onclick="move('down')">⬇️</button>
+            <button class="btn" onclick="move('right')">➡️</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

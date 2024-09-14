@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Story Mode</title>
+</head>
+<body>
+    <div class="story-container">
+        <h2>A Day in the Life</h2>
+        <div id="story-content">
+            <p id="story-text">You wake up feeling a little crampy. What will you do first?</p>
+            <div id="choices">
+                <button onclick="makeChoice('stretch')">Stretch and Relax</button>
+                <button onclick="makeChoice('medication')">Take Pain Medication</button>
+                <button onclick="makeChoice('ignore')">Ignore and Go Back to Sleep</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="story-mode.js"></script>
+</body>
+</html>

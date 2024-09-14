@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cycle Tracker Setup</title>
+</head>
+<body>
+    <div class="tracker-container">
+        <h2>Cycle Tracker Setup</h2>
+        <p>Select the dates and enter information about your cycle.</p>
+
+        <!-- Calendar and Form -->
+        <form id="cycle-form">
+            <label for="cycle-date">Select Date:</label>
+            <input type="date" id="cycle-date" required>
+
+            <label for="symptoms">Symptoms:</label>
+            <input type="text" id="symptoms" placeholder="E.g., cramps, fatigue">
+
+            <label for="moods">Mood:</label>
+            <input type="text" id="moods" placeholder="E.g., happy, anxious">
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" placeholder="Add any additional notes here..."></textarea>
+
+            <button type="submit" class="btn save-btn">Save</button>
+        </form>
+
+        <!-- Display Saved Entries -->
+        <h3>Saved Entries</h3>
+        <div id="entries-container"></div>
+    </div>
+
+    <script src="cycle-tracker.js"></script>
+</body>
+</html>

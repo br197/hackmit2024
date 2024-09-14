@@ -1,0 +1,489 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+#dashboard_subtext{
+    font-size: 25px;
+}
+
+.balance-streak {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0;
+    padding: 10px;
+    background: linear-gradient(to right, #d16ba5, #86a8e7);
+    border-radius: 10px;
+    color: white;
+}
+
+.balance, .streak {
+    flex: 1;
+    text-align: center;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px linear-gradient(to right, #d16ba5, #86a8e7)
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #4a4acf;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffecc7;
+    border-radius: 10px;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.profile-description {
+    flex: 1;
+    margin-left: 20px;
+    color: #555;
+}
+
+.profile-description p {
+    margin: 0;
+}
+
+/* Background colors for individual cards */
+.card.blue {
+    background: linear-gradient(to bottom right, #6EC6FF, #2196F3);
+}
+
+.card.purple {
+    background: linear-gradient(to bottom right, #D16BA5, #8E44AD);
+}
+
+.card.red {
+    background: linear-gradient(to bottom right, #FF867F, #FF1744);
+}
+
+.card.yellow {
+    background: linear-gradient(to bottom right, #FFF176, #FFD600);
+}
+
+
+/* Navigation Section Styles */
+.navigation-section {
+    display: flex;
+    background-color: #ffecec;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 20%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sidebar .avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.sidebar .balance {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.sidebar .nav-links {
+    margin-top: 20px;
+}
+
+.sidebar .nav-links p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Main Navigation Content Styles */
+.main-navigation-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.main-navigation-content h2 {
+    color: #e57373;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.progress-path {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Step Styles */
+.step {
+    width: 80px;
+    height: 80px;
+    background-color: #f48fb1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+}
+
+.step.locked {
+    background-color: #e0e0e0;
+}
+
+.step::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 40px;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-50%);
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to right, #f2f2f2 50%, #6a1b9a 50%);
+}
+
+.login-form {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.login-form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn {
+    background: linear-gradient(to right, #d16ba5, #86a8e7);
+    color: white;
+}
+
+.social-btn {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn.google {
+    margin-top: 10px;
+    background-color: #db4437;
+    color: white;
+}
+
+.social-btn.facebook {
+    margin-top: 10px;
+    background-color: #4267b2;
+    color: white;
+}
+
+.create-account-btn {
+    background: linear-gradient(to right, #d16ba5, #86a8e7);
+    color: white;
+}
+
+/* Right Side - Illustration */
+.login-illustration {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6a1b9a;
+    color: white;
+}
+
+.login-illustration .image-content {
+    text-align: center;
+}
+
+.login-illustration img {
+    width: 80%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.login-illustration h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Character Selection Page Styles */
+.character-selection-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff; /* Set background to white */
+    padding: 40px 20px;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.character-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.character-card p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.back-btn, .next-btn {
+    background: linear-gradient(to right, #d16ba5, #86a8e7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Resource Hunt Game Styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.game-sidebar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+.scoreboard {
+    font-size: 18px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.grid-cell {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.character {
+    background-image: url('character.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.resource {
+    background-image: url('resource.png'); /* Example image of a resource (e.g., pad, snack) */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.obstacle {
+    background-image: url('obstacle.png'); /* Example image of an obstacle (e.g., rocks, trees) */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px;
+    background: linear-gradient(to right, #d16ba5, #86a8e7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Cycle Tracker Styles */
+.tracker-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cycle-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#cycle-form label {
+    margin-top: 10px;
+}
+
+#cycle-form input, #cycle-form textarea, #cycle-form button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background: linear-gradient(to right, #d16ba5, #86a8e7);
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+
+#entries-container {
+    margin-top: 20px;
+}

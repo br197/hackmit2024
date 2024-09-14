@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFEFF1;
+  }
+  
+  h3{
+    font-size: 30;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 200px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    height: 95vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar img {
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar .alerions {
+    background-color: #F9C8C8;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #F06D6D;
+  }
+  
+  .sidebar ul li img {
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .main-content h1 {
+    color: #F06D6D;
+    font-size: 32px;
+    margin-bottom: 30px;}
+  
+  #navigating_txt{
+    margin-left: 20px;
+  }
+  .navigation-btns {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+  }
+  
+  .navigation-btns .btn {
+    background-color: #F06D6D;
+    color: #FFF;
+    border: none;
+    border-radius: 10%;
+    width: 110px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -20px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .navigation-btns:hover{
+    transform:scale(1.1);
+  }
+  
+  /* Navigation Path Styles */
+.navigation-path {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -410px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: #FFCDD2;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.circle img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.circle p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}

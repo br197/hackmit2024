@@ -217,16 +217,17 @@ h3{
     display: flex;
     height: 100vh;
     background: linear-gradient(to right, #f2f2f2 50%, #6a1b9a 50%);
+    width: 100vw;
 }
 
 .login-form {
-    width: 50%;
+    width: 60%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: white;
 }
 
 .login-form h2 {
@@ -277,11 +278,13 @@ h3{
 .login-btn {
     background: linear-gradient(to right, #d16ba5, #86a8e7);
     color: white;
+    
 }
 
 .social-btn {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 .social-btn.google {
@@ -299,15 +302,15 @@ h3{
 .create-account-btn {
     background: linear-gradient(to right, #d16ba5, #86a8e7);
     color: white;
+    width: 300px;
 }
 
 /* Right Side - Illustration */
 .login-illustration {
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #6a1b9a;
+    background: linear-gradient(#603DCB, #F159B3);
     color: white;
 }
 
@@ -316,7 +319,7 @@ h3{
 }
 
 .login-illustration img {
-    width: 80%;
+    width: 100%;
     border-radius: 15px;
     margin-bottom: 20px;
 }

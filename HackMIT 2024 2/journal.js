@@ -1,6 +1,5 @@
 // Variables to store user achievements, progress, and interaction count
 let progress = 0;
-let stickers = [];
 let interactionCount = 0;
 const maxInteractions = 10; // Number of interactions to complete the module
 
@@ -54,7 +53,7 @@ function processMessage(input) {
     // Display AI response
     setTimeout(() => {
         displayMessage('ai', aiResponse);
-        addSticker(); // Add a sticker after every response
+        handleJournalInteraction(aiResponse); // Add sticker based on the response
 
         // Check if interactions reach the maximum count
         if (interactionCount >= maxInteractions) {
@@ -78,73 +77,22 @@ function getAIResponse(input) {
     return generalResponses[Math.floor(Math.random() * generalResponses.length)];
 }
 
-// Add stickers to the sticker board
-function addSticker() {
-    const stickerTypes = [
-        'Cramps Conqueror', 'Cycle Tracker Expert', 'Learning Pro', 'Fitness Friend', 'Healthy Eater', 
-        'Cycle Superhero', 'Flow Master', 'Period Pro', 'Crimson Conqueror', 'Menstrual Maven',
-        'Pad Prodigy', 'Tampon Tactician', 'Cycle Savant', 'Monthly Maestro', 'Period Ace', 
-        'Cycle Guardian', 'Rhythm Keeper', 'Flow Sensei', 'Cycle Star', 'Period Protector', 
-        'Red Badge Winner', 'Crimson Star', 'Pad Pioneer', 'Cycle Captain', 'Flow Finder', 
-        'Self-Care Queen', 'Relaxation Guru', 'Meditation Master', 'Calm Captain', 'Hydration Hero', 
-        'Self-Care Sage', 'Stress-Buster', 'Mindfulness Champ', 'Rest and Recharge', 'Balance Bringer', 
-        'Self-Love Specialist', 'Me-Time Expert', 'Mental Wellness Wizard', 'Stress-Free Superstar', 
-        'Comfort Creator', 'Cozy Keeper', 'Peace Protector', 'Relaxation Ruler', 'Chill Champion', 
-        'Serenity Seeker', 'Healthy Plate Pro', 'Iron Boost Star', 'Snack Savvy', 'Hydration Master', 
-        'Vitamin Vindicator', 'Nutritious Knight', 'Snack Sensei', 'Balanced Bite', 'Protein Powerhouse', 
-        'Foodie Friend', 'Health Hero', 'Nutrition Navigator', 'Wellness Wizard', 'Mindful Muncher', 
-        'Meal Master', 'Energy Expert', 'Sugar Smart', 'Smoothie Specialist', 'Fruit Fanatic', 
-        'Veggie Virtuoso', 'Stretch Star', 'Workout Warrior', 'Yoga Yogi', 'Movement Master', 
-        'Dance Dynamo', 'Step Counter Pro', 'Pilates Pro', 'Run Ready', 'Energy Enhancer', 
-        'Exercise Explorer', 'Fitness Fanatic', 'Endurance Expert', 'Cardio Conqueror', 'Relaxation Runner', 
-        'Strength Superstar', 'Flexibility Finder', 'Movement Mentor', 'Active Achiever', 'Mood Tracker Expert', 
-        'Positive Vibes', 'Gratitude Guru', 'Emotional Explorer', 'Happy Helper', 'Confidence Creator', 
-        'Thoughtful Thinker', 'Calm Communicator', 'Mood Swing Master', 'Compassionate Companion', 'Empathy Expert', 
-        'Reflection Rockstar', 'Journaling Genius', 'Supportive Soul', 'Cheerful Champion', 'Positivity Pioneer', 
-        'Mindset Magician', 'Thoughtful Tracker', 'Hopeful Healer', 'Reflection Ruler'
-    ];
-    const sticker = stickerTypes[Math.floor(Math.random() * stickerTypes.length)]; // Pick a random sticker
-
-    if (!stickers.includes(sticker)) {
-        stickers.push(sticker);
-        const stickerElement = document.createElement('div');
-        stickerElement.classList.add('sticker');
-        stickerElement.textContent = sticker;
-        document.getElementById('sticker-board').appendChild(stickerElement);
-        updateProgress();
+// Handle journal interaction and add stickers
+function handleJournalInteraction(response) {
+    // Example condition to add a sticker based on the interaction
+    if (response.includes('learned')) {
+        addSticker('Learning Pro');
+    } else if (response.includes('hydration')) {
+        addSticker('Hydration Hero');
+    } else if (response.includes('cycle')) {
+        addSticker('Cycle Tracker Expert');
     }
+
+    // Update stickers display
+    displayStickers();
 }
 
-// Update progress and check if the module is complete
-function updateProgress() {
-    progress += 20; // Increment progress (10% per interaction)
-    document.getElementById('progress-bar').value = progress;
-
-    if (progress >= 100) {
-        document.getElementById('download-summary').disabled = false;
-    }
-}
-
-// Complete the module and allow summary download
-function completeModule() {
-    displayMessage('ai', "Congratulations! You've completed the module. You can download your summary now.");
-    document.getElementById('download-summary').disabled = false;
-}
-
-// Download summary
-function downloadSummary() {
-    const summary = `Lily's Monthly Summary\n\nStickers Earned:\n- ${stickers.join('\n- ')}\n\nReflections: You’ve made great progress in understanding period care! Keep up the fantastic work.`;
-    
-    // Create a Blob and download it
-    const blob = new Blob([summary], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Lily_Summary.txt';
-    a.click();
-    URL.revokeObjectURL(url);
-}
-
+// Add stickers to localStorage and achievements section
 function addSticker(stickerName) {
     // Retrieve current stickers from localStorage
     let stickers = JSON.parse(localStorage.getItem('achievements')) || [];
@@ -156,9 +104,21 @@ function addSticker(stickerName) {
 
         // Update the stickers display on the achievements section
         displayStickers();
+        updateProgress();
     }
 }
 
+// Update progress and check if the module is complete
+function updateProgress() {
+    progress += 10; // Increment progress (10% per interaction)
+    document.getElementById('progress-bar').value = progress;
+
+    if (progress >= 100) {
+        document.getElementById('download-summary').disabled = false;
+    }
+}
+
+// Display stickers on the achievements section
 function displayStickers() {
     const achievementsContainer = document.getElementById('achievements-container');
     achievementsContainer.innerHTML = ''; // Clear previous content
@@ -173,15 +133,26 @@ function displayStickers() {
     });
 }
 
-// Call this function when the user receives a new sticker in the journal interactions
-function handleJournalInteraction(response) {
-    // Example condition to add a sticker based on the interaction
-    if (response.includes('learned')) {
-        addSticker('Learning Pro');
-    } else if (response.includes('hydration')) {
-        addSticker('Hydration Hero');
-    }
-
-    // Call display stickers to update the achievements page
-    displayStickers();
+// Complete the module and allow summary download
+function completeModule() {
+    displayMessage('ai', "Congratulations! You've completed the module. You can download your summary now.");
+    document.getElementById('download-summary').disabled = false;
 }
+
+// Download summary
+function downloadSummary() {
+    const stickers = JSON.parse(localStorage.getItem('achievements')) || [];
+    const summary = `Lily's Monthly Summary\n\nStickers Earned:\n- ${stickers.join('\n- ')}\n\nReflections: You’ve made great progress in understanding period care! Keep up the fantastic work.`;
+    
+    // Create a Blob and download it
+    const blob = new Blob([summary], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Lily_Summary.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Initial display of stickers
+displayStickers();

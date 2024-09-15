@@ -266,7 +266,7 @@ h3{
 }
 
 .btn {
-    width: 100%;
+    width: 200%;
     padding: 10px;
     margin: 10px 0;
     border: none;
@@ -278,8 +278,15 @@ h3{
 .login-btn {
     background: linear-gradient(to right, #d16ba5, #86a8e7);
     color: white;
-    
+    border:none;
+    border-radius:10px;
+    width: 150px;
+    height:40px;
 }
+.login-btn:hover{
+    transform:scale(1.1);
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -477,11 +484,11 @@ h2 {
     cursor: pointer;
     margin-top: 20px;
     display: block;
-    width: 100%;
+    width: 40%;
 }
 
 .btn:hover {
-    background-color: #ff8c69;
+    transform:scale(1.1);
 }
 
 #quiz-result {

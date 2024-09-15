@@ -14,7 +14,7 @@
       <img src="avatar.png" alt="Lily Avatar">
       <div class="alerions">💰 100 Alerions</div>
       <ul>
-        <li><a href="#"><strong>HOME</strong></a></li>
+        <li><a href="dashboard.html"><strong>HOME</strong></a></li>
         <li><a href="#"><strong>RESOURCES</strong></a></li>
         <li><a href="#"><strong>STORE</strong></a></li>
         <li><a href="#"><strong>AWARD</strong></a></li>
@@ -27,16 +27,16 @@
       
       <!-- Circle Icons for Navigation -->
       <div class="navigation-path">
-        <div class="circle" onclick="navigateTo('meetLily')">
-          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/person.png" alt="Meet Lily">
+        <div class="circle">
+          <a href="story-mode.html"><img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/person.png" alt="Meet Lily"></a>
           <p>Meet Lily</p>
         </div>
         <div class="circle" onclick="navigateTo('whatsAPeriod')">
-          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/redblob.png" alt="What's a Period?">
+          <a href="quiz.html"><img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/redblob.png" alt="What's a Period?"></a>
           <p>What's a Period?</p>
         </div>
         <div class="circle" onclick="navigateTo('helpLily')">
-          <img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/question.png" alt="Help Lily">
+          <a href="resource-hunt.html"><img src="/Users/briannaroundtree/Downloads/HackMIT 2024/images/question.png" alt="Help Lily"></a>
           <p>Help Lily</p>
         </div>
         <div class="circle" onclick="navigateTo('lilysproactiveness')">
@@ -55,12 +55,5 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function navigateTo(section) {
-      alert(`Navigating to ${section}`);
-      // Implement navigation logic here, such as loading a new page or displaying content
-    }
-  </script>
 </body>
 </html>

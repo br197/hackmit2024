@@ -30,6 +30,11 @@ h3{
     color: white;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .balance-streak {
     display: flex;
     justify-content: space-between;

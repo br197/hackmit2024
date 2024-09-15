@@ -12,6 +12,11 @@ body {
   .container {
     display: flex;
   }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
   
   /* Sidebar Styles */
   .sidebar {

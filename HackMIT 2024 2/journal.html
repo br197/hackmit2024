@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="journal.css">
+    <title>Lily's Interactive Journal</title>
+</head>
+<body>
+    <div class="journal-container">
+        <div class="journal-page">
+            <h2>Lily's Interactive Journal</h2>
+            
+            <!-- Chat Container for AI and User -->
+            <div class="chat-container">
+                <div id="chat-box">
+                    <p class="ai-message">Welcome back! How are you feeling today?</p>
+                </div>
+                <textarea id="user-input" placeholder="Type your reflection here..."></textarea>
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+            <!-- Sticker Collection -->
+            <div class="stickers">
+                <h3>Your Achievements:</h3>
+                <div id="sticker-board"></div>
+            </div>
+
+            <!-- Progress and Summary Section -->
+            <div class="progress-summary">
+                <h3>Progress</h3>
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <button id="download-summary" onclick="downloadSummary()" disabled>Download Summary</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="journal.js"></script>
+</body>
+</html>

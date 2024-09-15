@@ -499,3 +499,20 @@ h2 {
 .hidden {
     display: none;
 }
+
+.achievements-section {
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticker {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffe0b2;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+}

@@ -5,6 +5,7 @@ let totalSpent = 0.00;
 let merchantId; // This will hold the merchant ID for purchases
 
 // Function to get Lily's account balance from the Nessie API
+
 async function getAccountBalance() {
     try {
         const response = await fetch(`http://api.nessieisreal.com/accounts/${accountId}?key=${apiKey}`);
@@ -20,25 +21,6 @@ async function getAccountBalance() {
     } catch (error) {
         console.error('Error fetching account balance:', error);
         alert('An error occurred while fetching the account balance. Please check the console for more details.');
-    }
-}
-
-// Function to get a valid merchant ID from the Nessie API
-async function getMerchantId() {
-    try {
-        const response = await fetch(`http://api.nessieisreal.com/merchants?key=${apiKey}`);
-        const merchants = await response.json();
-
-        if (response.ok && merchants.length > 0) {
-            merchantId = merchants[0]._id;
-            console.log('Merchant ID selected:', merchantId);
-        } else {
-            console.error('No merchants found or error in response:', merchants);
-            alert('No valid merchants found. Please check the console for more details.');
-        }
-    } catch (error) {
-        console.error('Error fetching merchants:', error);
-        alert('An error occurred while fetching merchant information. Please check the console for more details.');
     }
 }
 
@@ -62,11 +44,6 @@ async function makePurchase(itemName, amount) {
         return;
     }
 
-    // Ensure the merchant ID is set
-    if (!merchantId) {
-        showFeedback('Error', 'Merchant not found. Please try again later.');
-        return;
-    }
 
     if (currentBalance < amount) {
         showFeedback('Insufficient Funds', 'You do not have enough money to make this purchase.');
@@ -74,8 +51,8 @@ async function makePurchase(itemName, amount) {
     }
 
     try {
-        const response = await fetch(`http://api.nessieisreal.com/accounts/${accountId}/purchases?key=${apiKey}`, {
-            method: 'POST',
+        const response = await fetch(`http://api.nessieisreal.com/accounts/${accountId}?key=${apiKey}`, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },

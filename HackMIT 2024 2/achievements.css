@@ -1,0 +1,57 @@
+/* achievements.css */
+
+/* General Styles for the Achievements Page */
+.achievements-page {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ff7043;
+}
+
+/* Achievements Container */
+#achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Sticker Styles */
+.sticker {
+    padding: 10px 20px;
+    background-color: #ffe0b2;
+    color: #d32f2f;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.sticker:hover {
+    background-color: #ffcc80;
+    transform: scale(1.05);
+}
+
+/* Back Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff5722;
+}

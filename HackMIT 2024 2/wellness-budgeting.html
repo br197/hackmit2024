@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wellness-budgeting.css">
+    <title>Lily's Wellness Budgeting</title>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Budget Information -->
+        <div class="budget-info">
+            <h2>Lily's Wellness Budgeting</h2>
+            <p><strong>Monthly Budget:</strong> $<span id="monthly-budget">100.00</span></p>
+            <p><strong>Current Balance:</strong> $<span id="balance">100.00</span></p>
+            <p><strong>Financial Goal:</strong> Save at least $30.00 for next month.</p>
+        </div>
+
+        <!-- Store Section -->
+        <div class="store-section">
+            <h3>Wellness Store</h3>
+            <div class="category">
+                <h4>Hygiene Products</h4>
+                <div class="product" onclick="makePurchase('Pads', 12)">
+                    <p>Pads - $12</p>
+                </div>
+                <div class="product" onclick="makePurchase('Tampons', 15)">
+                    <p>Tampons - $15</p>
+                </div>
+            </div>
+            <div class="category">
+                <h4>Wellness Items</h4>
+                <div class="product" onclick="makePurchase('Heating Pad', 20)">
+                    <p>Heating Pad - $20</p>
+                </div>
+                <div class="product" onclick="makePurchase('Herbal Tea', 8)">
+                    <p>Herbal Tea - $8</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div id="feedback" class="feedback-section hidden">
+            <h3 id="feedback-title"></h3>
+            <p id="feedback-text"></p>
+            <button onclick="closeFeedback()">OK</button>
+        </div>
+
+        <!-- Spending Summary -->
+        <div class="summary-section hidden">
+            <h3>Monthly Spending Summary</h3>
+            <p>Total Spent: $<span id="total-spent">0.00</span></p>
+            <p>Savings for Next Month: $<span id="savings">0.00</span></p>
+            <button onclick="goToDashboard()">Finish</button>
+        </div>
+
+        <!-- Back to Dashboard Button (Initially Hidden) -->
+        <div class="back-button hidden">
+            <a href="dashboard.html">⬅️ Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script src="wellness-budgeting.js"></script>
+</body>
+</html>

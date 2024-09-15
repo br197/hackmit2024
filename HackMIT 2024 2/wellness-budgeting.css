@@ -10,17 +10,12 @@ body {
 }
 
 .game-container {
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1000px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Budget Information */
-.budget-info {
-    margin-bottom: 20px;
 }
 
 /* Store Section */
@@ -28,10 +23,14 @@ body {
     margin-bottom: 20px;
 }
 
+.category {
+    margin-bottom: 15px;
+}
+
 .product {
     padding: 10px;
     background-color: #e0f7fa;
-    margin: 10px 0;
+    margin: 5px 0;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;

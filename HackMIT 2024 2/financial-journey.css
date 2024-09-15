@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+}
+
+.game-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Budget Information */
+.budget-info {
+    margin-bottom: 20px;
+}
+
+/* Store Section */
+.store-section {
+    margin-bottom: 20px;
+}
+
+.product {
+    padding: 10px;
+    background-color: #e0f7fa;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.product:hover {
+    background-color: #b2ebf2;
+}
+
+/* Feedback Section */
+.feedback-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* Back Button */
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    background-color: #e57373;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}

@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.game-container {
+    display: flex;
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Shopping List Styles */
+.shopping-list {
+    width: 250px;
+    padding: 20px;
+    border-right: 2px solid #e0e0e0;
+}
+
+h2 {
+    color: #e57373;
+}
+
+/* Game Area Styles */
+.game-area {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin-left: 20px;
+    background-color: #e0f7fa; /* Light blue store background */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #e0e0e0;
+}
+
+/* Aisle Styles */
+.aisle {
+    position: absolute;
+    width: 100px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+#aisle-1 {
+    top: 50px;
+    left: 100px;
+}
+
+#aisle-2 {
+    top: 50px;
+    left: 300px;
+}
+
+#aisle-3 {
+    top: 50px;
+    left: 500px;
+}
+
+/* Resource Styles */
+/* Resource Styles */
+.resource {
+    width: 80px; /* Adjust the width */
+    height: 80px; /* Adjust the height */
+    position: absolute;
+    background-size: contain; /* Make sure the image fits the container */
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Resource Positions */
+#resource-pad {
+    top: 75px;
+    left: 110px;
+    background-image: url('images/pad-icon.png');
+    /* background-size: 50px; */
+}
+
+#resource-tampon {
+    top: 200px;
+    left: 300px;
+    background-image: url('images/tampon-icon.png'); /* Replace with actual image */
+}
+
+#resource-heating-pad {
+    top: 300px;
+    left: 500px;
+    background-image: url('images/heating-pad-icon.png'); /* Replace with actual image */
+}
+
+/* Character Styles */
+.character {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 400px;
+    left: 50px;
+    background-image: url('images/lily-character.png'); /* Replace with character image */
+    background-size: cover;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Arrow Keys Styles */
+.arrow-keys {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.arrow-keys button {
+    background-color: #e57373;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-keys button:hover {
+    background-color: #d32f2f;
+}
+
+/* Back Button Styles */
+.back-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    background-color: #e57373;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.back-button a:hover {
+    background-color: #d32f2f;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}

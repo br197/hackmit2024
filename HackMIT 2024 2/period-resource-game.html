@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="period-resource.css">
+    <title>Help Lily Navigate the Store</title>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Shopping List Sidebar -->
+        <div class="shopping-list">
+            <h2>Help Lily Find Period Resources!</h2>
+            <p><strong>Shopping List:</strong></p>
+            <ul>
+                <li id="item-pad">Pad</li>
+                <li id="item-tampon">Tampon</li>
+                <li id="item-heating-pad">Heating Pad</li>
+            </ul>
+            <p>Use the arrow keys to move Lily around the store!</p>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area">
+            <div class="aisle" id="aisle-1"></div>
+            <div class="aisle" id="aisle-2"></div>
+            <div class="aisle" id="aisle-3"></div>
+
+            <!-- Period Resources -->
+            <div class="resource" id="resource-pad" onclick="collectResource('pad')"></div>
+            <div class="resource" id="resource-tampon" onclick="collectResource('tampon')"></div>
+            <div class="resource" id="resource-heating-pad" onclick="collectResource('heating-pad')"></div>
+
+            <!-- Character -->
+            <div class="character" id="lily-character"></div>
+        </div>
+
+        <!-- Onscreen Arrow Keys -->
+        <div class="arrow-keys">
+            <button onclick="moveCharacter(0, -10)">⬆️</button><br>
+            <button onclick="moveCharacter(-10, 0)">⬅️</button>
+            <button onclick="moveCharacter(10, 0)">➡️</button><br>
+            <button onclick="moveCharacter(0, 10)">⬇️</button>
+        </div>
+
+        <!-- Back to Dashboard Button -->
+        <div class="back-button hidden">
+            <a href="navigating_period.html">⬅️ Back to Learning</a>
+        </div>
+    </div>
+
+    <!-- Popup for Explanations -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <h3 id="popup-title"></h3>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+
+    <script src="period-resource.js"></script>
+</body>
+</html>

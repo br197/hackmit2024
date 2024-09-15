@@ -444,3 +444,58 @@ h2 {
 #entries-container {
     margin-top: 20px;
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    color: #ff6f61;
+    text-align: center;
+}
+
+.btn {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #ff8c69;
+}
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.confetti {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Hidden class to hide elements */
+.hidden {
+    display: none;
+}

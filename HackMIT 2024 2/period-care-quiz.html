@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Period Care Quiz</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Period Care Quiz</h2>
+        <form id="quiz-form">
+            <p>1. How often should you change a pad or tampon?</p>
+            <label><input type="radio" name="q1" value="correct"> Every 4-6 hours</label><br>
+            <label><input type="radio" name="q1" value="wrong"> Once a day</label><br>
+
+            <p>2. What can help relieve cramps?</p>
+            <label><input type="radio" name="q2" value="correct"> Heating pad</label><br>
+            <label><input type="radio" name="q2" value="wrong"> Drinking soda</label><br>
+
+            <p>3. True or False: You should avoid exercising during your period.</p>
+            <label><input type="radio" name="q3" value="wrong"> True</label><br>
+            <label><input type="radio" name="q3" value="correct"> False</label><br>
+
+            <p>4. Which of these is NOT a symptom of PMS (Premenstrual Syndrome)?</p>
+            <label><input type="radio" name="q4" value="wrong"> Mood swings</label><br>
+            <label><input type="radio" name="q4" value="correct"> Increased vision</label><br>
+            <label><input type="radio" name="q4" value="wrong"> Bloating</label><br>
+
+            <p>5. What is the best way to track your menstrual cycle?</p>
+            <label><input type="radio" name="q5" value="correct"> Using a period tracking app</label><br>
+            <label><input type="radio" name="q5" value="wrong"> Guessing the dates</label><br>
+
+            <p>6. True or False: You can swim during your period.</p>
+            <label><input type="radio" name="q6" value="correct"> True</label><br>
+            <label><input type="radio" name="q6" value="wrong"> False</label><br>
+
+            <p>7. Which food can help alleviate period symptoms?</p>
+            <label><input type="radio" name="q7" value="correct"> Dark chocolate</label><br>
+            <label><input type="radio" name="q7" value="wrong"> Chips</label><br>
+
+            <p>8. Which product is reusable?</p>
+            <label><input type="radio" name="q8" value="wrong"> Disposable pad</label><br>
+            <label><input type="radio" name="q8" value="correct"> Menstrual cup</label><br>
+
+            <p>9. True or False: You should only use tampons if you have a heavy flow.</p>
+            <label><input type="radio" name="q9" value="wrong"> True</label><br>
+            <label><input type="radio" name="q9" value="correct"> False</label><br>
+
+            <p>10. What should you do if you experience severe pain during your period?</p>
+            <label><input type="radio" name="q10" value="wrong"> Ignore it</label><br>
+            <label><input type="radio" name="q10" value="correct"> Consult a healthcare professional</label><br>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="quiz-result"></div>
+        <!-- Next Button -->
+        <button id="next-btn" class="btn hidden">Next</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

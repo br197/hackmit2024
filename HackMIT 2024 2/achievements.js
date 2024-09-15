@@ -9,7 +9,8 @@ function displayAchievements() {
     // Add default module achievements if not already present
     const defaultModules = [
         'Completed Module: Navigating Periods', 
-        'Completed Module: Understanding Growth'
+        'Completed Module: Understanding Growth',
+        'Completed Module: Self Esteem'
     ];
 
     defaultModules.forEach(module => {
@@ -17,7 +18,7 @@ function displayAchievements() {
             stickers.push(module);
         }
     });
-
+    
     // Save the updated stickers to localStorage
     localStorage.setItem('achievements', JSON.stringify(stickers));
 

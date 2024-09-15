@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+    <title>Shop</title>
+</head>
+<body>
+    <div class="shop-container">
+        <h1>Lily's Shop</h1>
+        <p>Your Balance: <span id="balance">100 Alerions</span></p>
+
+        <!-- Shop Section for Outfits -->
+        <div class="shop-section">
+            <h2>Buy Outfits</h2>
+            <div class="item" data-price="30" data-item="Casual Outfit">
+                <p>Casual Outfit - 30 Alerions</p>
+                <button onclick="purchaseItem(this)">Buy</button>
+            </div>
+            <div class="item" data-price="50" data-item="Fancy Dress">
+                <p>Fancy Dress - 50 Alerions</p>
+                <button onclick="purchaseItem(this)">Buy</button>
+            </div>
+            <div class="item" data-price="20" data-item="Sportswear">
+                <p>Sportswear - 20 Alerions</p>
+                <button onclick="purchaseItem(this)">Buy</button>
+            </div>
+        </div>
+
+        <!-- Shop Section for Points -->
+        <div class="shop-section">
+            <h2>Buy More Alerions</h2>
+            <div class="item" data-price="5" data-item="10 Alerions">
+                <p>10 Alerions - 5 Alerions</p>
+                <button onclick="purchaseItem(this)">Buy</button>
+            </div>
+            <div class="item" data-price="10" data-item="25 Alerions">
+                <p>25 Alerions - 10 Alerions</p>
+                <button onclick="purchaseItem(this)">Buy</button>
+            </div>
+            <div class="item" data-price="20" data-item="50 Alerions">
+                <p>50 Alerions - 20 Alerions</p>
+                <button onclick="purchaseItem(this)">Buy</button>
+            </div>
+        </div>
+
+        <!-- Button to go back to the dashboard -->
+        <button class="back-button" onclick="goBack()">Back to Dashboard</button>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>

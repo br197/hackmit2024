@@ -11,8 +11,8 @@ function makeChoice(choice) {
     // Update choices for the next part of the story
     const choices = document.getElementById('choices');
     choices.innerHTML = `
-        <button onclick="makeChoice('healthy')">Eat a Healthy Breakfast</button>
-        <button onclick="makeChoice('snack')">Grab a Quick Snack</button>
-        <button onclick="makeChoice('skip')">Skip Breakfast</button>
+        <button onclick="window.location.href='navigating_period.html';">Let's take on the day!</button>
     `;
+
 }
+
